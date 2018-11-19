@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.*?>
+<BorderPane id="borderPane" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="MenuController">
+    <top>
+        <MenuBar id="menuBar" focusTraversable="true" >  
+            <menus>  
+                <Menu text="Jeu">  
+                    <fx:define>
+                        <ToggleGroup fx:id="toggleGroupJeu"/>  
+                    </fx:define>
+                    <items>  
+                        <RadioMenuItem fx:id="hackenbush" text="Hackenbush" toggleGroup="$toggleGroupJeu" selected="true"/>  
+                        <RadioMenuItem fx:id="nim" text="Nim" toggleGroup="$toggleGroupJeu"/>  
+                        <SeparatorMenuItem  />  
+                        <MenuItem text="Quitter"  onAction="#quitter" accelerator="Shortcut+Q"/>  
+                        
+                    </items>  
+                </Menu>  
+                <Menu text="Mode">  
+                    <fx:define>
+                        <ToggleGroup fx:id="toggleGroupMode"/>  
+                    </fx:define>
+                    <items>  
+                        <RadioMenuItem fx:id="normal" text="Normal" toggleGroup="$toggleGroupMode" selected="true"/>  
+                        <RadioMenuItem fx:id="misere" text="Misere" toggleGroup="$toggleGroupMode"/>  
+                    </items>  
+                </Menu>  
+                <Menu text="Joueur">  
+                    <fx:define>
+                        <ToggleGroup fx:id="toggleGroupJoueur"/>  
+                    </fx:define>
+                    <items>  
+                        <RadioMenuItem fx:id="jrvsjr" text="Joueur vs Joueur" toggleGroup="$toggleGroupJoueur" selected="true"/>  
+                        <RadioMenuItem fx:id="jrvsia" text="Joueur vs IA" toggleGroup="$toggleGroupJoueur"/> 
+                        <RadioMenuItem fx:id="iavsia" text="IA vs IA (NIM only)" toggleGroup="$toggleGroupJoueur"/>   
+                       
+                    </items>  
+                </Menu>  
+            </menus>  
+        </MenuBar>  
+    </top>
+    
+    <center>
+ 
+        <Pane fx:id="conteneur"/>
+         
+    </center>
+            
+</BorderPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+
+<BorderPane id="borderPane" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="HackenbushEditionController">
+    
+    <center >
+        <Pane fx:id="pane"/> 
+    </center>
+    
+    <bottom>
+        <ToolBar fx:id="toolbar">
+            <items>
+                <ComboBox layoutX="14.0" layoutY="14.0" fx:id="colorPick">
+                   <items>
+                     <FXCollections fx:factory="observableArrayList">
+                       <String fx:value="Blue"/>
+                       <String fx:value="Red"/>
+                       <String fx:value="Green"/>
+                     </FXCollections>
+                   </items>
+                   <value>
+                       <String fx:value="Blue" />
+                   </value>
+                 </ComboBox>
+                 
+                <ToggleButton fx:id="ajouterButton" text="Ajouter" />
+                <ToggleButton fx:id="deplacerButton" text="Deplacer" />
+                <ToggleButton fx:id="colorierButton" text="Colorier" />
+                <ToggleButton fx:id="supprimerButton" text="Supprimer" />
+                <ToggleButton fx:id="afficherButton" text="Afficher" />
+                <Separator />
+                 <Button fx:id="jouerButton" text="Jouer"/>  
+            </items> 
+                       
+            <fx:define>
+                <ToggleGroup fx:id="toggle" >
+                    <toggles>
+                        <fx:reference source="ajouterButton"/>
+                        <fx:reference source="deplacerButton"/>  
+                        <fx:reference source="colorierButton"/>  
+                        <fx:reference source="supprimerButton"/>
+                        <fx:reference source="afficherButton"/>                         
+                    </toggles>            
+                </ToggleGroup>
+            </fx:define> 
+            
+        </ToolBar>
+            
+    </bottom>
+
+
+</BorderPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.geometry.*?>
+
+<BorderPane id="borderPane" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="HackenbushPlayController">
+    
+    <center >
+        <Pane fx:id="pane"/> 
+    </center>
+    
+    <bottom>
+        <GridPane>
+        <columnConstraints>
+            <ColumnConstraints halignment="LEFT" />
+         </columnConstraints>
+         
+         <Text text="Tour de" GridPane.columnIndex="0" >
+             <GridPane.margin><Insets right="10" left="10"/></GridPane.margin>
+         </Text>
+         
+        <Circle fx:id="circle" radius="10" GridPane.columnIndex="1" ></Circle>
+        
+         <Text fx:id="alerte" GridPane.columnIndex="2" >
+             <GridPane.margin><Insets left="300"/></GridPane.margin>
+         </Text>
+
+        </GridPane>
+    </bottom>
+
+
+</BorderPane>
